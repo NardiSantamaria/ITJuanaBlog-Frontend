@@ -23,6 +23,7 @@ export const Comments = ({commentarios}) => {
         console.log(newComment);
         const savedComment = await createComment(postId, newComment);
         setNewCommentState({ ...newCommentState, savedComment });
+        navigate("/");
       }
     }
 
@@ -32,6 +33,7 @@ export const Comments = ({commentarios}) => {
         const res = await deleteComment(commentId, postId);
     
         setAllComments({ ...allComments, res });
+        navigate("/");
       }
     }
     const handleOnChange = (event) => {
