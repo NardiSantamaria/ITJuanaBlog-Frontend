@@ -1,4 +1,4 @@
-const URL_SERVER = "http://localhost:8000/";
+const URL_SERVER = "https://itjuanablog-backend.herokuapp.com/";
 
 export const getAllPost = async() => {
     try {

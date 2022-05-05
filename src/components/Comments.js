@@ -79,9 +79,7 @@ export const Comments = ({commentarios}) => {
         commentarios.map((comment, index) => {
         return (
           <div className="blog-post-box">
-            <div className="comment-box">
-              {comment._id} 
-            </div>
+           
             <div className="comment-box">
               {comment.author} 
             </div>
