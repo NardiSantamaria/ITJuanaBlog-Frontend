@@ -23,7 +23,7 @@ export const Comments = ({commentarios}) => {
         const savedComment = await createComment(postId, newComment);
         setNewCommentState({ ...newCommentState, savedComment });
       }
-      window.location.reload(true);
+      navigate("/");
     }
 
     const handleonDelete = async (commentId, postId)=>{
