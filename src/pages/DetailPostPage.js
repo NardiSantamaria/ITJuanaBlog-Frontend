@@ -17,7 +17,7 @@ export const DetailPostPage = ({onDelete}) => {
       setPost(res);
     };
     fetchPost();
-  }, []);
+  }, [postId]);
   
   return (
     <><Post
