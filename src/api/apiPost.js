@@ -59,7 +59,7 @@ export const deletePost = async (id) =>{
 
 export const createComment = async (id, post)=>{
     try {
-        const res = await fetch(URL_SERVER + "create-comment/"+ id,{
+         await fetch(URL_SERVER + "create-comment/"+ id,{
             method: "PUT",
             headers : {"Content-type": "application/json"},
             body: JSON.stringify(post),

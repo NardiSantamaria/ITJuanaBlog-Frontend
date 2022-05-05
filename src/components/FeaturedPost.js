@@ -7,7 +7,7 @@ const FeaturedPost = ({image, title, updatedAt, content, blogLink, width, height
       <div className="blog-post-feature-image">
         <img
           src={image}
-          alt="Feature Post Image"
+          alt="Feature Post"
           width={width}
           height={height}
         />
@@ -16,7 +16,6 @@ const FeaturedPost = ({image, title, updatedAt, content, blogLink, width, height
         <p>{updatedAt}</p>
         <h1>{title}</h1>
         <p>{content}</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   );

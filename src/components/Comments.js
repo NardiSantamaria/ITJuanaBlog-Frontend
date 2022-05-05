@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {createComment, deleteComment } from "../api/apiPost";
 import { useParams } from 'react-router-dom';
