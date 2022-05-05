@@ -20,11 +20,10 @@ export const Comments = ({commentarios}) => {
 
     const handleonSave = async (newComment, postId)=>{
       if(newComment){
-        console.log(newComment);
         const savedComment = await createComment(postId, newComment);
         setNewCommentState({ ...newCommentState, savedComment });
-        navigate("/");
       }
+      window.location.reload(true);
     }
 
     const handleonDelete = async (commentId, postId)=>{
