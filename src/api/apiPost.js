@@ -1,5 +1,5 @@
-const URL_SERVER = "https://itjuanablog-backend.herokuapp.com/";
-
+//const URL_SERVER = "https://itjuanablog-backend.herokuapp.com/";
+const URL_SERVER = `${process.env.REACT_APP_API_URL}`;
 export const getAllPost = async() => {
     try {
         const res = await fetch(URL_SERVER + "posts/");
