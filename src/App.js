@@ -32,11 +32,13 @@ function App() {
         item._id === res._id ? post : item
       );
       setAllPosts(copyOfPosts);
+      navigate("/");
     } else {
       await createPost(post);
       setAllPosts([...allPosts, post]);
+      navigate("/");
     }
-    navigate("/");
+    window.location.reload(true);
   };
 
   const handleOnEdit = async (postId, post) => {
