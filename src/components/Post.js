@@ -12,7 +12,7 @@ const Post = ({ post, onEdit, index, onDelete,  id, isDetails  }) => {
       <div className="blog-post-image">
         <img
           src={post.imageUrl}
-          alt="Blog header image"
+          alt="Blog header"
           width={250}
           height={250}
         />

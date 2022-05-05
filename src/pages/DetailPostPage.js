@@ -9,14 +9,15 @@ export const DetailPostPage = ({onDelete}) => {
   const { postId } = params;
   const [post, setPost] = useState({});
 
-  const fetchPost = async () => {
-    const res = await getPostById(postId);
-    console.log(res); //see all properties
-    setPost(res);
-  };
+ 
   useEffect(() => {
+    const fetchPost = async () => {
+      const res = await getPostById(postId);
+      console.log(res); //see all properties
+      setPost(res);
+    };
     fetchPost();
-  }, []);
+  }, [postId]);
   
   return (
     <><Post

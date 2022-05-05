@@ -8,12 +8,12 @@ import { HomePage } from "./pages/HomePage";
 import CreatePost from "./pages/CreatePost";
 import { DetailPostPage } from "./pages/DetailPostPage";
 import { Error } from "./components/Error";
-import { getAllPost, createPost, updatePost, deletePost, createComment } from "./api/apiPost";
+import { getAllPost, createPost, updatePost, deletePost } from "./api/apiPost";
 
 function App() {
   const navigate = useNavigate();
   const [allPosts, setAllPosts] = useState([]);
-  const [postId, setPostId] = useState();
+  const [postId] = useState();
 
   const fetchPosts = async () => {
     const res = await getAllPost();
@@ -23,10 +23,6 @@ function App() {
   useEffect(() => {
     fetchPosts();
   }, []);
-  
-  const findPostById = (id) => {
-    return allPosts[id];
-  };
 
   const handleOnSave = async (post) => {
     console.log(post);
@@ -37,7 +33,7 @@ function App() {
       );
       setAllPosts(copyOfPosts);
     } else {
-      const res = await createPost(post);
+      await createPost(post);
       setAllPosts([...allPosts, post]);
     }
     navigate("/");
@@ -53,7 +49,7 @@ function App() {
   };
   
   const onDelete = async (id) => {
-    const res = await deletePost(id);
+    await deletePost(id);
     const copyOfPosts = allPosts.filter((item) => item._id !== id);
     setAllPosts(copyOfPosts);
   };
